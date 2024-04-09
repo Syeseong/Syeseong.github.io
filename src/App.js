@@ -13,18 +13,22 @@ import { useEffect } from 'react';
 function App() {
   const { modalOn, modalOn2 } = useSchedules()
   useEffect(() => {
-    // 스크롤 흔들림 방지 로직
     const preventOverscroll = (e) => {
+      // 스크롤이 필요한 요소 내에서의 이벤트인지 체크
+      if (e.target.classList.contains('scrollable')) {
+        // 스크롤이 필요한 요소 내에서는 기본 동작 방지를 하지 않음
+        return;
+      }
       e.preventDefault();
     };
 
     document.body.addEventListener('touchmove', preventOverscroll, { passive: false });
 
-    // Cleanup 함수
     return () => {
       document.body.removeEventListener('touchmove', preventOverscroll, { passive: false });
     };
-  }, [])
+  }, []);
+
   return (
     <div className="App">
       <div className='main_container'>

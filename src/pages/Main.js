@@ -4,7 +4,7 @@ import Header from "../components/Header";
 
 const Main = () => {
     return (
-        <div className="Main">
+        <div className="Main scrollable">
             <Header />
             <DayBody />
             <CellBody />

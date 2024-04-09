@@ -38,7 +38,7 @@ const CellBody = () => {
                 dayClass = "saturday"
             }
             days.push(
-                <div className={`day_col ${dayClass} ${!isSameMonth(day, monthStart) ? "disabled" : isSameDay(day, selectedDate) ? "selected" : format(currentMonth, 'M') !== format(day, 'M') ? "not-valid" : "valid"}`}
+                <div className={`day_col scrollable ${dayClass} ${!isSameMonth(day, monthStart) ? "disabled" : isSameDay(day, selectedDate) ? "selected" : format(currentMonth, 'M') !== format(day, 'M') ? "not-valid" : "valid"}`}
                     key={day}
                     onClick={() => { onDateClick(cloneDay) }}>
                     <span className={format(currentMonth, 'M') !== format(day, 'M') ? "not-valid" : ""}>
