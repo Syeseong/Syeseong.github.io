@@ -35,7 +35,7 @@ const AddSchedule = () => {
             <div className="addSchedule_color">
                 <div>배너</div>
                 {colorOptions.map(it => (
-                    <input onChange={(e) => {
+                    <button onChange={(e) => {
                         setColor(e.target.value)
                     }} className="color_box" key={it} style={{ backgroundColor: color === it || color === null ? it : "#DCDCDC" }}
                         onClick={() => handleColorClick(it)} />

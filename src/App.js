@@ -7,11 +7,24 @@ import './Modal.css'
 import DetailSchedule from './pages/DetailSchedule';
 import Main from './pages/Main';
 import { useSchedules } from './context/ScheduleContext';
-import Modal2 from './pages/Modal2';
+import { useEffect } from 'react';
 
 
 function App() {
   const { modalOn, modalOn2 } = useSchedules()
+  useEffect(() => {
+    // 스크롤 흔들림 방지 로직
+    const preventOverscroll = (e) => {
+      e.preventDefault();
+    };
+
+    document.body.addEventListener('touchmove', preventOverscroll, { passive: false });
+
+    // Cleanup 함수
+    return () => {
+      document.body.removeEventListener('touchmove', preventOverscroll, { passive: false });
+    };
+  }, [])
   return (
     <div className="App">
       <div className='main_container'>
