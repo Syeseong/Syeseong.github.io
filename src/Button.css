@@ -1,0 +1,43 @@
+.Button {
+    width: 50px;
+    height: 30px;
+    /* border: 1px solid red; */
+
+}
+
+.Button button {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 7px;
+    font-size: 25px;
+    font-family: "Dongle", sans-serif;
+    color: white;
+}
+
+.Button button.add_btn {
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+.Button button.remove_btn {
+    background-color: rgb(255, 255, 255);
+    color: black;
+    font-size: 20px;
+    cursor: pointer;
+    /* border: 1px solid red; */
+}
+
+.Button button.save_btn {
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+.Button button.modify_btn {
+    background-color: rgb(20, 189, 20);
+}
+
+.Button button.cancle_btn {
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
